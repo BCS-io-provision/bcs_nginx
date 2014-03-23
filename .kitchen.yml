@@ -1,0 +1,25 @@
+---
+driver:
+  name: vagrant
+
+provisioner:
+  name: chef_solo
+
+platforms:
+  - name: ubuntu-12.04
+    driver_config:
+      network:
+      - ["private_network", {ip: "192.168.1.240"}]
+
+suites:
+  - name: default
+    run_list:
+      - recipe[bcs_nginx::default]
+    attributes:
+  - name: monit_virtual_server
+    run_list:
+      - recipe[monit::default]
+      - recipe[bcs_nginx::default]
+      - recipe[bcs_nginx::monit_virtual_server]
+    attributes:
+

@@ -52,6 +52,15 @@ Usage
 }
 ```
 
+Verify
+------
+
+Verifying Monit Virtual Server
+* spin up only monit-virtual-server-ubuntu-1204
+* cat /etc/hosts should include: 192.168.1.240      monit.islay
+* visit monit.islay with browser
+
+
 Contributing
 ------------
 
