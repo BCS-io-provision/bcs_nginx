@@ -4,5 +4,4 @@
 #
 # Copyright 2014, BCS-io
 #
-
-include_recipe "nginx::server"
+include_recipe "nginx::default"
