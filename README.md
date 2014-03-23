@@ -57,9 +57,9 @@ Verify
 
 Verifying Monit Virtual Server
 * spin up only monit-virtual-server-ubuntu-1204
+* cat /etc/hosts should include: 192.168.1.240      monit.islay
 * ping kitchen private network: ping 192.168.1.240
 * login netstat -tulpn: should see 127.0.0.1:2812 (or whatever port)
-* cat /etc/hosts should include: 192.168.1.240      monit.islay
 * visit monit.islay with browser
 
 
