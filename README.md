@@ -48,7 +48,7 @@ Usage
 {
   "name":"my_node",
   "run_list": [
-    "recipe[nginx-wrapper::default]"
+    "recipe[bcs_nginx::default]"
   ]
 }
 ```
