@@ -1,4 +1,4 @@
-nginx-wrapper CHANGELOG
+bcs_nginx CHANGELOG
 =======================
 
 This file is used to list changes made in each version of the nginx-wrapper cookbook.

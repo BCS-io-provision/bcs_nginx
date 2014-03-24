@@ -4,5 +4,6 @@ if node[:monit_address]
     group  'root'
     mode   '0644'
     source 'monit_virtual_server.erb'
+    notifies :reload, 'service[nginx]'
   end
 end
