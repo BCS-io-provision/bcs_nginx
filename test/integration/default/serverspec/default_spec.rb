@@ -3,6 +3,7 @@ include Serverspec::Helper::Exec
 include Serverspec::Helper::DetectOS
 
 describe 'bcs_nginx::default' do
-  # Seem to have a general bug in verify
-  # kitchen setup fine but verify fails
+  it 'installed nginx version' do
+    expect(package 'nginx').to be_installed
+  end
 end
