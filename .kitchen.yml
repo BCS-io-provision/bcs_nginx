@@ -7,9 +7,11 @@ provisioner:
 
 platforms:
   - name: ubuntu-12.04
-    driver_config:
-      network:
-      - ["private_network", {ip: "192.168.1.240"}]
+  - name: ubuntu-14.04
+
+-driver_config:
+   network:
+   - ["private_network", {ip: "192.168.1.240"}]
 
 suites:
   - name: default
