@@ -5,3 +5,6 @@ default['nginx']['default_site_enabled'] = false
 # HTTPD through Nginx allowing userfriendly monit.<server> address
 default['monit_address'] = 'monit.islay'
 default['monit_port'] = '2812'
+
+
+default['nginx']['kibana_available'] = false

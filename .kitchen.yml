@@ -13,6 +13,8 @@ suites:
     run_list:
       - recipe[bcs_nginx::default]
     attributes:
+      nginx:
+        kibana_available: true
   - name: monit_virtual_server
     run_list:
       - recipe[monit::default]
