@@ -28,21 +28,28 @@ Monit_virtual_server recipe
 Attributes
 ----------
 
+
+
 HTTPD Attributes
 
-| Attribute     | Description             | Default             |
-| ------------- | ------------------------| --------------------|
-| monit_address | url to monit            | 'monit.islay'       |
-| monit_port    | port monit listening on | '2812'              |
+Attibutes are namespaced under nginx. `nodes['nginx']`
+
+| Attribute        | Description                | Default             |
+| ---------------- | -------------------------- | --------------------|
+| monit_available  | If monit site is included  | false               |
+| monit_address    | url to monit               | 'monit.islay'       |
+| monit_port       | port monit listening on    | '2812'              |
+| kibana_available | If kibana site is included | false               |
 
 
 Usage
 -----
 
-| Recipe               | Description                                             |
-| -------------------- | ------------------------------------------------------- |
-| default              | Installs nginx through the package management system    |
-| monit_virtual_server | Add nginx virtual_server block into sites-enabled       |
+| Recipe      | Description                                                           |
+| ----------- | --------------------------------------------------------------------- |
+| default     | Installs nginx through the package management system                  |
+| monit_site  | Add virtual_server block for monit into sites-available and link to sites-enabled  |
+| kibana_site | Add virtual_server block for kibana into sites-available and link to sites-enabled |
 
 ```json
 {
