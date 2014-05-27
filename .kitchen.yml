@@ -14,11 +14,14 @@ suites:
       - recipe[bcs_nginx::default]
     attributes:
       nginx:
+        monit_available: true
         kibana_available: true
-  - name: monit_virtual_server
+  # No sites created
+  - name: empty
     run_list:
-      - recipe[monit::default]
       - recipe[bcs_nginx::default]
-      - recipe[bcs_nginx::monit_virtual_server]
     attributes:
+      nginx:
+        monit_available: false
+        kibana_available: false
 

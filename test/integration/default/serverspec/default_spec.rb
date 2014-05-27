@@ -7,6 +7,19 @@ describe 'bcs_nginx::default' do
     expect(package 'nginx').to be_installed
   end
 
+  describe 'monit site' do
+    describe file '/etc/nginx/sites-available/monit' do
+      it { should be_file }
+      its(:content) { should match /monit.islay/ }
+      its(:content) { should match /2812/ }
+    end
+
+    describe file '/etc/nginx/sites-enabled/monit' do
+      it { should be_file }
+      it { should be_linked_to '/etc/nginx/sites-available/monit' }
+    end
+  end
+
   describe 'kibana site' do
     describe file '/etc/nginx/sites-available/kibana' do
       it { should be_file }
