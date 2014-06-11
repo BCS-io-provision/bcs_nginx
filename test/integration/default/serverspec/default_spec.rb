@@ -7,10 +7,15 @@ describe 'bcs_nginx::default' do
     expect(package 'nginx').to be_installed
   end
 
+  describe service 'nginx' do
+    it { should be_enabled }
+    it { should be_running }
+  end
+
   describe 'monit site' do
     describe file '/etc/nginx/sites-available/monit' do
       it { should be_file }
-      its(:content) { should match /monit.islay/ }
+      its(:content) { should match /monit.change.this/ }
       its(:content) { should match /2812/ }
     end
 

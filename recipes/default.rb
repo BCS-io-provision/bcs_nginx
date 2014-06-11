@@ -10,5 +10,5 @@ include_recipe 'bcs_nginx::kibana_site'
 
 service 'nginx' do
   supports :restart => true, :reload => true
-  action :restart
+  action [:enable, :start]
 end
