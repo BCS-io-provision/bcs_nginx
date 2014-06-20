@@ -12,6 +12,18 @@ describe 'bcs_nginx::default' do
     it { should be_running }
   end
 
+  describe 'default site' do
+    describe file '/etc/nginx/sites-available/default' do
+      it { should be_file }
+      its(:content) { should match /www\/nginx-default/ }
+    end
+
+    describe file '/etc/nginx/sites-enabled/default' do
+      it { should_not be_file }
+    end
+  end
+
+
   describe 'monit site' do
     describe file '/etc/nginx/sites-available/monit' do
       it { should be_file }

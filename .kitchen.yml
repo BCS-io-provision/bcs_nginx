@@ -16,14 +16,14 @@ suites:
       - recipe[bcs_nginx::default]
     attributes:
       nginx:
-        monit_available: true
         kibana_available: true
+        monit_available: true
   # No sites created
   - name: empty
     run_list:
       - recipe[bcs_nginx::default]
     attributes:
       nginx:
-        monit_available: false
         kibana_available: false
+        monit_available: false
 
