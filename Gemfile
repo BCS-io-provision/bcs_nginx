@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
-gem 'berkshelf', '~> 3.0.1'
-gem 'chefspec', '~> 3.4.0'
+gem 'berkshelf', '~> 5.2.0'
+gem 'chefspec', '~> 5.3.0'
 
 group :integration do
   gem 'kitchen-docker', '~> 2.6.0'
