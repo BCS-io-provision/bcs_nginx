@@ -1,3 +1,10 @@
+Lint/RescueException:
+  Exclude:
+    - 'Rakefile'
+
 Metrics/BlockLength:
   Exclude:
     - test/integration/default/serverspec/default_spec.rb
+
+Metrics/LineLength:
+  Enabled: false
