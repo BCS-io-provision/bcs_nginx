@@ -3,7 +3,7 @@ set :backend, :exec
 
 describe 'bcs_nginx::default' do
   it 'installed nginx version' do
-    expect(package 'nginx').to be_installed
+    expect(package('nginx')).to be_installed
   end
 
   describe service 'nginx' do
@@ -14,7 +14,7 @@ describe 'bcs_nginx::default' do
   describe 'default site' do
     describe file '/etc/nginx/sites-available/default' do
       it { should be_file }
-      its(:content) { should match /www\/nginx-default/ }
+      its(:content) { should match(%r{www/nginx-default}) }
     end
 
     describe file '/etc/nginx/sites-enabled/default' do
@@ -22,12 +22,11 @@ describe 'bcs_nginx::default' do
     end
   end
 
-
   describe 'monit site' do
     describe file '/etc/nginx/sites-available/monit' do
       it { should be_file }
-      its(:content) { should match /monit.change.this/ }
-      its(:content) { should match /2812/ }
+      its(:content) { should match(/monit.change.this/) }
+      its(:content) { should match(/2812/) }
     end
 
     describe file '/etc/nginx/sites-enabled/monit' do

@@ -9,6 +9,6 @@ include_recipe 'bcs_nginx::monit_site'
 include_recipe 'bcs_nginx::kibana_site'
 
 service 'nginx' do
-  supports :restart => true, :reload => true
+  supports restart: true, reload: true
   action [:enable, :start]
 end
