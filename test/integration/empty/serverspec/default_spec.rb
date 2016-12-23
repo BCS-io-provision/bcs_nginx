@@ -1,9 +1,7 @@
 require 'serverspec'
-include Serverspec::Helper::Exec
-include Serverspec::Helper::DetectOS
+set :backend, :exec
 
 describe 'bcs_nginx::default' do
-
   describe 'monit site' do
     describe file '/etc/nginx/sites-available/monit' do
       it { should_not be_file }
