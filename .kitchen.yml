@@ -1,6 +1,9 @@
 ---
 driver:
   name: docker
+  # Mac client tries, by default, is setting use_sudo to true
+  # https://github.com/test-kitchen/kitchen-docker/issues/201
+  use_sudo: false
 
 provisioner:
   name: chef_solo
