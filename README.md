@@ -3,6 +3,15 @@ bcs_nginx Cookbook
 Configures nginx in a consistent manner for the bcs systems.
 Installing nginx and adding virtual_servers are the main responsiblities.
 
+Note: We are switching from a cookbook named [nginx](https://github.com/miketheman/nginx) to cookbook named [chef_nginx](https://github.com/chef-cookbooks/chef_nginx) until nginx cookbook has finished the 3.0.0 branch.
+It is not obvious and I can't find it in the documentation of nginx cookbook.
+
+> nginx vs. chef_nginx
+>
+> This cookbook is a fork from the 2.7.x branch of the community nginx cookbook.
+>
+> This fork will be actively supported by Chef Software and we will continue to migrate the cookbook to a more resource driven model, with incremental changes following the SemVer model.
+
 
 Requirements
 ------------
