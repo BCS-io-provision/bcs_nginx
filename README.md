@@ -22,9 +22,9 @@ Default recipe
 
 | Requirement | Tested Version                                                  |
 | ----------- | ----------------------------------------------------------------|
-| Chef        | 11.0+                                                           |
-| Ruby        | 2.1.1+                                                          |
-| Ubuntu      | 12.04+                                                          |
+| Chef        | 12.0+                                                           |
+| Ruby        | 2.2.1+                                                          |
+| Ubuntu      | 14.04+                                                          |
 | nginx       | Cookbook Opscode 2.4.4+                                         |
 
 Monit_virtual_server recipe
