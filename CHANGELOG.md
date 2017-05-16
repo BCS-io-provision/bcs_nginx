@@ -3,6 +3,10 @@ bcs_nginx CHANGELOG
 
 This file is used to list changes made in each version of the nginx-wrapper cookbook.
 
+## [2.1.0] - 2017-05-16
+### Change
+  - Supports SSL
+
 ## [2.0.1] - 2016-05-16
 ### Change
   - Compatible with Chef 13
