@@ -3,6 +3,12 @@ bcs_nginx CHANGELOG
 
 This file is used to list changes made in each version of the nginx-wrapper cookbook.
 
+## [2.0.1] - 2016-05-16
+### Change
+  - Compatible with Chef 13
+  - Remove cloned resource
+  - MIT License
+
 ## [2.0.0] - 2016-12-23
 ### Breaking Change
   - Switching from nginx cookbook to chef_nginx cookbook
