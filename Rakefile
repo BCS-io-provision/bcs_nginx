@@ -42,7 +42,7 @@ task :destroy do
 end
 
 # The default rake task should just run it all
-task default: %w(style integration)
+task default: %w[style integration]
 
 begin
   Timeout.timeout(15) do

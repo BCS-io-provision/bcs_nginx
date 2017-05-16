@@ -14,7 +14,7 @@ describe 'bcs_nginx::default' do
   describe 'default site' do
     describe file '/etc/nginx/sites-available/default' do
       it { should be_file }
-      its(:content) { should match(%r{server}) }
+      its(:content) { should match(/server/) }
     end
 
     describe file '/etc/nginx/sites-enabled/default' do
