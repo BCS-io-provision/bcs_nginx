@@ -3,6 +3,10 @@ bcs_nginx CHANGELOG
 
 This file is used to list changes made in each version of the nginx-wrapper cookbook.
 
+## [2.1.1] - 2017-05-20
+### Change
+  - only restart NGINX if certificate has changed
+
 ## [2.1.0] - 2017-05-16
 ### Change
   - Supports SSL

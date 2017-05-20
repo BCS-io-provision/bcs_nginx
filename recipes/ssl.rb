@@ -30,18 +30,15 @@ domains.each do |domain|
     crt     "#{ssl_directory}/certs/#{domain}.crt"
     chain   "#{ssl_directory}/certs/#{domain}.pem"
     key     "#{ssl_directory}/private/#{domain}.key"
+    notifies :restart, 'service[nginx]', :immediate
     owner    'root'
     group    'root'
-    not_if { ::File.exist?("/etc/ssl/certs/#{domain}.crt") }
+    only_if { File.exist?("#{node['nginx']['dir']}/sites-enabled/#{domain}") &&
+              !File.exist?("/etc/ssl/certs/#{domain}.crt") }
   end
 end
 
 include_recipe 'bcs_nginx::default'
-
-service 'nginx' do
-  supports status: true, restart: true, reload: true
-  action   [:restart]
-end
 
 # Set up your webserver here...
 
