@@ -1,5 +1,6 @@
 
 default['nginx']['default_site_enabled'] = false
+default['nginx']['default']['modules'] = ['http_ssl_module']
 
 # Monit_virtual_server recipe
 # HTTPD through Nginx allowing userfriendly monit.<server> address
