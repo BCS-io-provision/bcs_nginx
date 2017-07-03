@@ -3,6 +3,15 @@ bcs_nginx CHANGELOG
 
 This file is used to list changes made in each version of the nginx-wrapper cookbook.
 
+## [2.2.0] - 2017-07-3
+### Change
+  - crt from just being server certificate to being server certificate with
+    intermediate chain certificates
+
+### Add
+  - add ssl module
+    - documentation not that clear
+
 ## [2.1.1] - 2017-05-20
 ### Change
   - only restart NGINX if certificate has changed
