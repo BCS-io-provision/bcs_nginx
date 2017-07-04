@@ -44,8 +44,7 @@ include_recipe 'bcs_nginx::default'
 domains.each do |domain|
   # Get and auto-renew the certificate from Let's Encrypt
   acme_certificate domain do
-    crt       "#{ssl_directory}/certs/#{domain}.crt"
-    chain     "#{ssl_directory}/certs/#{domain}.pem"
+    fullchain "#{ssl_directory}/certs/#{domain}.crt"
     key       "#{ssl_directory}/private/#{domain}.key"
     retries   0
     wwwroot   node['nginx']['default_root']
