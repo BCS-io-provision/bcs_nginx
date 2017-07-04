@@ -28,7 +28,6 @@ domains.each do |domain|
   # Generate a self-signed if we don't have a cert to prevent bootstrap problems
   acme_selfsigned domain do
     crt     "#{ssl_directory}/certs/#{domain}.crt"
-    chain   "#{ssl_directory}/certs/#{domain}.pem"
     key     "#{ssl_directory}/private/#{domain}.key"
     notifies :restart, 'service[nginx]', :immediate
     owner    'root'
