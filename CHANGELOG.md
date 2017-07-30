@@ -3,6 +3,11 @@ bcs_nginx CHANGELOG
 
 This file is used to list changes made in each version of the nginx-wrapper cookbook.
 
+## [2.2.1] - 2017-07-30
+### Change
+ - letsencrypt email updated
+   - you cannot remove and add email to letsencrypt email list
+
 ## [2.2.0] - 2017-07-3
 ### Change
   - crt from just being server certificate to being server certificate with
