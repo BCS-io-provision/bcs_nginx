@@ -11,7 +11,9 @@ default['nginx']['monit_port'] = '2812'
 default['nginx']['kibana_available'] = false
 
 # Set up contact information. Note the mailto: notation
-default['bcs_nginx']['ssl_contact'] = ['mailto:mail@shade.lighting']
+default['bcs_nginx']['ssl_contact'] = ['mailto:mail@bcs.io']
+# I revoked myself from letsencrypt list for mail@shade.lighting
+# using bcs.io for now
 default['bcs_nginx']['domains'] = ['draca.co.uk', 'shade.lighting', 'book-gardener.co.uk']
 
 # Fake certificates for testing
