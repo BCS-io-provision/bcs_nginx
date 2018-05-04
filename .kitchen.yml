@@ -1,13 +1,11 @@
 ---
 driver:
-  name: docker
-  # Mac client tries, by default, is setting use_sudo to true
-  # https://github.com/test-kitchen/kitchen-docker/issues/201
-  use_sudo: false
+  name: vagrant
 
 provisioner:
   name: chef_zero
-  require_chef_omnibus: 13
+  product_name: chef
+  product_version: latest
   deprecations_as_errors: true
 
 platforms:
