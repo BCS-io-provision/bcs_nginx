@@ -2,6 +2,10 @@ bcs_nginx CHANGELOG
 =======================
 
 This file is used to list changes made in each version of the nginx-wrapper cookbook.
+## [2.2.2] - 2018-05-04
+### Change
+  - Docker to vagrant
+  - Gems updated
 
 ## [2.2.1] - 2017-07-30
 ### Change
