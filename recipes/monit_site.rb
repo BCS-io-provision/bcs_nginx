@@ -16,6 +16,6 @@ if node['nginx']['monit_available']
   end
 
   nginx_site 'monit' do
-    enable true
+    action :enable
   end
 end

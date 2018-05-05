@@ -12,6 +12,6 @@ if node['nginx']['kibana_available']
   end
 
   nginx_site 'kibana' do
-    enable true
+    action :enable
   end
 end
