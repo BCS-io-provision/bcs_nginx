@@ -2,6 +2,7 @@ bcs_nginx Cookbook
 ======================
 Configures nginx in a consistent manner for the bcs systems.
 Installing nginx and adding virtual_servers are the main responsiblities.
+Configure SSL certificates for BCS domains through letsencrypt.
 
 Wraps [chef_nginx](https://github.com/chef-cookbooks/chef_nginx) - cookbook supported by Chef Software and we will continue to migrate the cookbook to a more resource driven model, with incremental changes following the SemVer model.
 
@@ -45,9 +46,10 @@ Attibutes are namespaced under nginx. `nodes['nginx']`
 Usage
 -----
 
-| Recipe      | Description                                                           |
-| ----------- | --------------------------------------------------------------------- |
-| default     | Installs nginx through the package management system                  |
+| Recipe      | Description                                                                        |
+| ----------- | ---------------------------------------------------------------------------------- |
+| default     | Installs nginx through the package management system                               |
+| ssl         | Create an acme / letsencrypt certificate for attributed websites                   |
 | monit_site  | Add virtual_server block for monit into sites-available and link to sites-enabled  |
 | kibana_site | Add virtual_server block for kibana into sites-available and link to sites-enabled |
 
