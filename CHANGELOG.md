@@ -1,5 +1,9 @@
 bcs_nginx CHANGELOG
 =======================
+#master
+### Change
+  - chef-cookbooks/chef_nginx => chef-cookbooks/nginx
+
 
 This file is used to list changes made in each version of the nginx-wrapper cookbook.
 ## [2.2.2] - 2018-05-04

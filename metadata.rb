@@ -15,4 +15,4 @@ supports         'ubuntu', '>= 14.04'
 
 depends          'acme'
 depends          'apt'
-depends          'chef_nginx', '>= 6.0.0'
+depends          'nginx'
