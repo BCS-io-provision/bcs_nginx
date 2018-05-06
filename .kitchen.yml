@@ -1,11 +1,14 @@
 ---
 driver:
   name: vagrant
+  network:
+    - ["forwarded_port", {guest: 80, host: 8080}]
+    - ["private_network", {ip: "192.168.33.33"}]
 
 provisioner:
   name: chef_zero
-  product_name: chef
-  product_version: latest
+  product_name: chefdk
+  product_version: 2.5.3
   deprecations_as_errors: true
 
 platforms:
