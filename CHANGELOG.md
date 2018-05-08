@@ -2,6 +2,7 @@ bcs_nginx CHANGELOG
 =======================
 #master
 ### Change
+  - Support Ubuntu 18.04
   - chef-cookbooks/chef_nginx => chef-cookbooks/nginx
 
 
